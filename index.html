@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function getComputerChoice(){
+            let selection = ['Rock','Paper','Scissors'];
+            const random = Math.floor(Math.random() * selection.length);
+            console.log(random,selection[random]);
+            return selection[random];
+
+        }
+
+        function playRound(playerSelection, computerSelection){
+
+            //Rock
+
+            let playerChoice = prompt("Enter Rock, Paper or Scissors:");
+
+            if(playerChoice === "rock" && computerSelection === "Rock")
+            {
+                alert("You chose Rock and the bot chose Rock , so its a tie!");
+
+            }
+
+            if(playerChoice === "rock" && computerSelection === "Scissors")
+            {
+                alert("You chose Rock and the bot chose Scissors, so you win! ");
+            }
+
+            if(playerChoice === "rock" && computerSelection === "Paper")
+            {
+                alert("You chose rock and the bot chose Paper, so you lost!");
+            }
+
+            //Paper
+
+            if(playerChoice === "paper" && computerSelection === "Rock")
+            {
+                alert("You chose paper and the bot chose Rock , so you win!");
+
+            }
+
+            if(playerChoice === "paper" && computerSelection === "Scissors")
+            {
+                alert("You chose paper and the bot chose Scissors, so you lost! ");
+            }
+
+            if(playerChoice === "paper" && computerSelection === "Paper")
+            {
+                alert("You chose paper and the bot chose Paper, so its a tie!");
+            }
+
+            //Scissors
+
+            if(playerChoice === "scissors" && computerSelection === "Rock")
+            {
+                alert("You chose scissors and the bot chose Rock , so you lost!");
+
+            }
+
+            if(playerChoice === "scissors" && computerSelection === "Scissors")
+            {
+                alert("You chose scissors and the bot chose Scissors, so its tie!");
+            }
+
+            if(playerChoice === "scissors" && computerSelection === "Paper")
+            {
+                alert("You chose scissors and the bot chose Paper, so you win!");
+            }
+
+            //game function
+
+            function game(){
+
+                playRound();
+                playRound();
+                playRound();
+                playRound();
+                playRound();
+
+            }
+
+            
+
+        }
+
+        const playerSelection = "rock";
+        const paper = "paper";
+        const scissor = "scissors";
+        const computerSelection = getComputerChoice();
+        playRound(playerSelection,computerSelection);
+    </script>
+
+    <h2 class="title">Rock Paper Scissors</h2>
+    <h3 class="subheading">Created using HTML, CSS JavaScript</h3>
+</body>
+</html>
